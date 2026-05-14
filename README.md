@@ -5,6 +5,12 @@
 
 ### Komga
 ```bash
-docker compose -f komga/compose.yml up -d
+docker compose --env-file .env -f komga/compose.yaml up -d
+```
+
+
+### Home Assistant
+```bash
+docker compose --env-file .env -f homeassistant/compose.yaml up -d
 ```
 

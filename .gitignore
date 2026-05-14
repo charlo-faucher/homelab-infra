@@ -1,1 +1,13 @@
+# Environment variables
 .env
+*.env
+
+# Home Assistant runtime files
+homeassistant/config/
+
+# Docker runtime
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
