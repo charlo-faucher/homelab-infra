@@ -1,0 +1,21 @@
+services:
+  komga:
+    image: gotson/komga:latest
+
+    container_name: komga
+
+    restart: unless-stopped
+
+    user: "${PUID}:${PGID}"
+
+    mem_limit: ${KOMGA_MEM_LIMIT}
+
+    ports:
+      - "25600:25600"
+
+    environment:
+      TZ: ${TZ}
+
+    volumes:
+      - ${DOCKER_ROOT}/komga/config:/config
+      - ${MEDIA_ROOT}/manga:/data
