@@ -1,0 +1,18 @@
+services:
+  jellyfin:
+    container_name: jellyfin
+    image: jellyfin/jellyfin:latest
+
+    restart: unless-stopped
+    network_mode: host
+
+    environment:
+      TZ: ${TZ}
+
+    volumes:
+      - ${JELLYFIN_CONFIG}:/config
+      - ${JELLYFIN_CACHE}:/cache
+      - ${MEDIA_MOVIES}:/media/movies
+      - ${MEDIA_SHOWS}:/media/shows
+
+    mem_limit: ${JELLYFIN_MEM_LIMIT}

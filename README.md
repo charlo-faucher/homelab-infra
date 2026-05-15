@@ -14,3 +14,9 @@ docker compose --env-file .env -f komga/compose.yaml up -d
 docker compose --env-file .env -f homeassistant/compose.yaml up -d
 ```
 
+
+### Jellyfin
+```bash
+docker compose --env-file .env -f jellyfin/compose.yaml up -d
+```
+
